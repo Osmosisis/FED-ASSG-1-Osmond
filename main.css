@@ -54,9 +54,9 @@ body {
 }
 
 .dropdown {
-    display: none; /* Hides dropdown initially */
+    display: none; 
     position: absolute;
-    top: 100%; /* Positions dropdown below parent */
+    top: 100%; 
     left: 0;
     background-color: #ffffff;
     list-style: none;
@@ -73,7 +73,7 @@ body {
     color: black;
     padding: 5px 0;
     display: block;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.01s ease-in-out;
 }
 .dropdown li a:hover {
     color: #ffffff;
