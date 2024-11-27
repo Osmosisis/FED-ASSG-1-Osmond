@@ -7,21 +7,16 @@ Recipository is an interactive and user-friendly recipe compilation website that
 
 
 *Recipes*
+  
   1. Ingredient-Based Search
-  Users often find themselves staring at their pantry, unsure of what to make with the ingredients they have. Recipository addresses this problem with a dynamic ingredient-based search feature.
-  
-  How it works: Users input the ingredients they have, and the system generates a list of recipes that can be made using those items.
-  Extra feature: It includes flexibility to find recipes that require just one or two additional ingredients the user might not have but are easily available.
-  
-  
-    1. Ingredient-Based Search
+     
     Users often find themselves staring at their pantry, unsure of what to make with the ingredients they have. Recipository addresses this problem with a dynamic ingredient-based search feature.
     
     How it works: Users input the ingredients they have, and the system generates a list of recipes that can be made using those items.
     Extra feature: It includes flexibility to find recipes that require just one or two additional ingredients the user might not have but are easily available.
-  >>>>>>> 2c5bba5fed0cef74eea3094dda841a45d43ecdf2
   
   2. Cuisine Preferences
+     
     Cooking preferences vary widely, and Recipository caters to diverse tastes by enabling users to filter recipes by their favorite cuisine types.
     
     Example cuisines include:
