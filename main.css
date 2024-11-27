@@ -54,10 +54,19 @@ body {
 }
 
 /* Recipes */
+
+.bg {
+    background-image: url("images/Wood light brown.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
 .rec {
     display: flex;
     list-style: none;
-    flex-direction: center;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     width: 94%; 
@@ -121,7 +130,7 @@ hr.custom{
     margin-left: 30px;
     width: 92%;
 }
-.recipe {
+.recipeword {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -131,4 +140,86 @@ hr.custom{
     padding: 20px;
     font-size: 28px;
     padding: 5px 15px;
+}
+.allrecipes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px 10px;
+    margin: 10px;
+    gap: 20px;
+}
+.recipeimg {
+    padding: 0;
+    margin: 0;
+}
+.recipeimg img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+.recipebox {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid #7b3f00;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    margin: 30px;
+    
+}
+.recipetext {
+    margin-top: auto;
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis; /* Add "..." for long text */
+    white-space: nowrap; /* Ensure text stays on one line */
+}
+.recipeimg, .recipetext {
+    position: relative;
+    z-index: 1;
+}
+
+/* Upload Recipes */
+.block {
+    background-color: transparent;
+    width: 550px;
+    padding: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px auto;
+    border: 3px solid #7b3f00;
+}
+.uploadbody {
+    background-color: transparent;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 10px 10px;
+    margin: 10px; 
+}
+.uploadbody h2 {
+    justify-content: center;
 }
