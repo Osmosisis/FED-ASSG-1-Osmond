@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Header */
 .container {
     background-color: #FFE692;
     width: 100%;
@@ -79,4 +80,14 @@ body {
     color: #ffffff;
     background-color: black;
     border-radius: 5px;
+}
+
+/* Main stuff and body */
+.recipe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
 }
