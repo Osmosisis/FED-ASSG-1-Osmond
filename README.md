@@ -14,6 +14,7 @@ Recipository is an interactive and user-friendly recipe compilation website that
   Cooking preferences vary widely, and Recipository caters to diverse tastes by enabling users to filter recipes by their favorite cuisine types.
   
   Example cuisines include:
+  
   Chinese
   
   Japanese
