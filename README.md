@@ -44,8 +44,8 @@ Recipository is an interactive and user-friendly recipe compilation website that
     This categorization helps users quickly find what they need without feeling overwhelmed by the variety.
   
   4. Step-by-Step Tutorials
-  
-  Interactive and visual guides for complex recipes will be provided through video tutorials or step-by-step instructions with images.
+
+     Interactive and visual guides for complex recipes will be provided through video tutorials or step-by-step instructions with images.
 
 ==========================
 
