@@ -4,6 +4,7 @@ Repository for my assignment 1
 Recipository is an interactive and user-friendly recipe compilation website that helps users discover and prepare meals tailored to their specific preferences and available ingredients. Designed to be a one-stop hub for cooking inspiration, Recipository empowers users to cook meals effortlessly by providing relevant recipe suggestions, tips, and variations. Whether you're a beginner experimenting in the kitchen or a seasoned cook looking to try new dishes, Recipository aims to make cooking accessible and enjoyable for everyone.
 
 ***Core Features***
+*Recipes*
 1. Ingredient-Based Search
 Users often find themselves staring at their pantry, unsure of what to make with the ingredients they have. Recipository addresses this problem with a dynamic ingredient-based search feature.
 
@@ -32,3 +33,9 @@ This categorization helps users quickly find what they need without feeling over
 
 4. Step-by-Step Tutorials
 Interactive and visual guides for complex recipes will be provided through video tutorials or step-by-step instructions with images.
+
+*Favourite Recipes*
+Users can favourite/bookmark their recipes and it will show the bookmarked recipes under the **Favourite recipes** page.
+
+*Upload Recipes*
+User will be able to **upload their recipes**, which includes an **image**, the **cuisine type**, the **meal type**, **ingredients** listed, and also the **Recipe**.

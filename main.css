@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Header */
 .container {
     background-color: #FFE692;
@@ -18,15 +19,22 @@ body {
     align-items: center;
     padding: 0 33px;
 }
-.container h1 {
+.container h1 u a{
     font-family: "Balsamiq Sans", sans-serif;
     font-weight: 700;
     font-style: italic;
+    text-decoration: none;
+    color: black;
 }
 .container h1:hover {
     cursor: pointer;
     color: #000000;
     transition: all 0.3s ease-in-out;
+}
+.container h2:hover {
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.15s ease-in-out;
 }
 .nav {
     display: flex;
@@ -37,20 +45,45 @@ body {
     padding: 0; 
     margin: 0; 
 }
-.nav li {
-    position: relative;
-}
-.nav > li > a {
+.nav a{
     text-decoration: none;
     color: black;
     font-size: 16px;
     padding: 8px 15px;
     transition: color 0.3s ease-in-out;
 }
-.nav > li > a:hover{
-    color: #ffffff;
+
+/* Recipes */
+.rec {
+    display: flex;
+    list-style: none;
+    flex-direction: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 94%; 
+    padding: 10px 10px;
+    margin: 10px; 
+    margin-bottom: 0px;
 }
-.nav li:hover > .dropdown{
+.rec li {
+    position: relative;
+}
+.rec > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 8px 15px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+.rec > li:hover {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out; 
+}
+.rec > li > a:hover {
+    background-color: transparent; 
+}
+.rec li:hover > .dropdown{
     display: block; 
 }
 
@@ -72,7 +105,7 @@ body {
 .dropdown li a {
     text-decoration: none;
     color: black;
-    padding: 5px 0;
+    padding: 10px 10px;
     display: block;
     transition: color 0.01s ease-in-out;
 }
@@ -81,13 +114,21 @@ body {
     background-color: black;
     border-radius: 5px;
 }
-
-/* Main stuff and body */
+hr.custom{
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-left: 30px;
+    width: 92%;
+}
 .recipe {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 20px;
+    font-size: 28px;
+    padding: 5px 15px;
 }
