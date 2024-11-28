@@ -209,7 +209,9 @@ img {
 
 /* Upload Recipes */
 .block {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(5px);
     width: 550px;
     padding: 50px;
     border-radius: 8px;
@@ -220,9 +222,18 @@ img {
     margin: 30px auto;
     border: 3px solid #7b3f00;
 }
+.uploadbg {
+    background-image: url("images/up recipe.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0%;
+    width: 100%;
+    margin: 0%;
+    overflow-x: hidden;
+}
 .uploadbody {
     background-color: transparent;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
