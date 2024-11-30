@@ -15,7 +15,9 @@ const recipes = [
             </ul>
             <h3>Instructions:</h3>
             <ol>
-                <li>Pound the pork loin or pork chop flat until it's about ¾ inch thick. Using scissors or a knife, cut slits into the outer white membrane of the pork. This prevents it from curling up as it cooks. Next, coat it with flour and shake off the excess.</li>
+                <li>Pound the pork loin or pork chop flat until it's about ¾ inch thick.</li> 
+                <br><li>Using scissors or a knife, cut slits into the outer white membrane of the pork. This prevents it from curling up as it cooks.</li> 
+                <br><li>Next, coat it with flour and shake off the excess.</li>
                 <br><li>Add a tablespoon of flour to the egg and mix them together. This creates a thicker egg wash that allows for more breadcrumbs to stick to. Dip the pork into the beaten egg and let the excess drip off.</li>
                 <br><li>Transfer the pork to the panko bread crumbs and press firmly to create a thick layer of bread crumbs that won't flake off in the fryer. Be sure to cover any bare spots with breading.</li>
                 <br><li>Heat the oil to 340 degrees F over medium heat. Medium heat is essential to cook the pork thoroughly without burning the bread crumbs.</li>
@@ -39,10 +41,10 @@ const recipes = [
             </ul>
             <h3>Instructions:</h3>
             <ol>
-                <li>Put the pork strips into an empty wok/pan over medium-high heat (you don’t need any oil). Stir occasionally to evenly heat the meat. You’ll see it changing colour and some oil appearing. So what you’re doing is actually frying the meat with its own fat.</li>
+                <li>Put the pork strips into an empty wok/pan over medium-high heat (you don't need any oil). Stir occasionally to evenly heat the meat. You’ll see it changing colour and some oil appearing. So what you’re doing is actually frying the meat with its own fat.</li>
                 <br><li>Once the pork gets golden slightly, add minced garlic and rock sugar (or white sugar). Fry until the garlic becomes fragrant and the sugar is melted.</li>
-                <br>li>Add the rest of the ingredients: light soy sauce, dark soy sauce, Shaoxing rice wine, five-spice powder, white pepper, diced shiitake mushroom, hard-boiled eggs and fried shallots.</li>
-                <br><li>To add more aroma to the dish, I use the water in which the mushrooms were soaked as the braising liquid. Top up with more water if necessary to fully immerse the meat.</li>
+                <br><li>Add the rest of the ingredients: light soy sauce, dark soy sauce, Shaoxing rice wine, five-spice powder, white pepper, diced shiitake mushroom, hard-boiled eggs and fried shallots.</li>
+                <br><li>To add more aroma to the dish, use the water in which the mushrooms were soaked as the braising liquid. Top up with more water if necessary to fully immerse the meat.</li>
                 <br><li>Once it comes to a full boil. Cover with a lid and turn down the heat to low. Leave to simmer for at least 1 hour until the pork becomes very tender and a little gelatinous.</li>
                 <br><li>If there is still a lot of liquid left when the pork is fully cooked, turn the heat to high and boil uncovered to reduce its volume and thicken. However, do not dry it out as it’s nice to serve a little thick broth over the rice.</li>
             </ol>`
@@ -67,7 +69,7 @@ const recipes = [
             <ol>
                 <li>Make marinade by combining the garlic, green onion, soy sauce, sugar, water, sesame oil, sesame seeds, and ground black pepper in a large bowl. Mix it well with a spoon until the sugar is well dissolved.</li>
                 <br><li>Add the sliced beef and mix everything by hand until the beef is covered in the marinade. Keep in the fridge at least 30 minutes.</li>
-                <<br>li>Cook on a pan or a grill, and transfer to a plate or a cast iron plate to serve with rice, lettuce</li>
+                <br><li>Cook on a pan or a grill, and transfer to a plate or a cast iron plate to serve with rice, lettuce</li>
             </ol>`
     },
     {
@@ -128,10 +130,14 @@ const recipes = [
             <ol>
                 <li>Place freshly made rice in a large, shallow bowl. Gently mix in ½ teaspoon kosher salt and 2 teaspoons toasted sesame oil over top with a rice scoop or a wooden spoon. Let it cool down enough so it’s no longer steaming. Cover and set aside.</li>
                 <br><li>Combine the blanched spinach, 2 minced garlic cloves, ½ teaspoon kosher salt, and 2 teaspoons toasted sesame oil in a bowl. Mix well by hand and put it on a large platter with the sliced yellow pickled radish.</li>
-                <br><li>Combine the carrot matchsticks with ¼ teaspoon kosher salt. Mix well and let it sweat for 5 to 10 minutes. Heat a pan and add a few drops vegetable oil. Squeeze out excess water from the carrot, then sauté for about 1 minute. Put it on the platter next to the spinach.</li>
-                <br><li>Trim the fat from the skirt steaks and slice into ¼ inch wide, 3 to 5 inch strips. Put the strips into a bowl. Add 2 teaspoons soy sauce, 1 minced garlic clove, ¼ teaspoon ground black pepper, 1 tablespoon plus 1 teaspoon brown (or white) sugar, and 2 teaspoons toasted sesame oil. Mix well by hand. Set aside, and let them marinate while we do the egg strips.</li>
-                <br><li>Crack 3 eggs in a bowl and add ¼ teaspoon kosher salt. Beat it with a fork and remove the stringy chalaza. Drizzle a few drops of oil on a heated 10 to 12 inch non-stick pan. Wipe off the excess with a paper towel so only a thin sheen of oil remains. Turn down the heat to low and pour the egg mixture into the pan. Spread it into a large circle so it fills the pan.</li>
-                <br><li>When the bottom of the egg is cooked, flip it over with a spatula. Remove from the heat and let it cook slowly in the hot pan for about 5 minutes, with the ultimate goal of keeping the egg as yellow as possible, and not brown. Cut it into ½ inch wide strips. Put it next to the spinach on the platter.</li>
+                <br><li>Combine the carrot matchsticks with ¼ teaspoon kosher salt. Mix well and let it sweat for 5 to 10 minutes. Heat a pan and add a few drops vegetable oil.</li> 
+                <br><li>Squeeze out excess water from the carrot, then sauté for about 1 minute. Put it on the platter next to the spinach.</li>
+                <br><li>Trim the fat from the skirt steaks and slice into ¼ inch wide, 3 to 5 inch strips. Put the strips into a bowl.</li> 
+                <br><li>Add 2 teaspoons soy sauce, 1 minced garlic clove, ¼ teaspoon ground black pepper, 1 tablespoon plus 1 teaspoon brown (or white) sugar, and 2 teaspoons toasted sesame oil. Mix well by hand. Set aside, and let them marinate while we do the egg strips.</li>
+                <br><li>Crack 3 eggs in a bowl and add ¼ teaspoon kosher salt. Beat it with a fork and remove the stringy chalaza.</li> 
+                <br><li>Drizzle a few drops of oil on a heated 10 to 12 inch non-stick pan. Wipe off the excess with a paper towel so only a thin sheen of oil remains. Turn down the heat to low and pour the egg mixture into the pan. Spread it into a large circle so it fills the pan.</li>
+                <br><li>When the bottom of the egg is cooked, flip it over with a spatula. Remove from the heat and let it cook slowly in the hot pan for about 5 minutes, with the ultimate goal of keeping the egg as yellow as possible, and not brown.</li> 
+                <br><li>Cut it into ½ inch wide strips. Put it next to the spinach on the platter.</li>
                 <br><li>Finish cooking steak.</li>
                 <br><li>Roll up and Enjoy!</li>
             </ol>`
