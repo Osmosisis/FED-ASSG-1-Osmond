@@ -11,7 +11,7 @@
     <div class="container">
         <h1><u><a href="index.html">Recipository</a></u></h1>
         <div class="nav">
-            <a href="Recipes.html"><h2>Recipes ≽^-⩊-^≼</h2></a>
+            <div class="selected"><a href="Recipes.html"><h2>Recipes ≽^-⩊-^≼</h2></a></div>
             <a href="Favourite recipes.html"><h2>Favourite Recipes</h2></a>
             <a href="Upload Recipes.html"><h2>Upload Recipes</h2></a>
         </div>
@@ -55,55 +55,69 @@
         </div>
         <hr class="custom">
         <div class="allrecipes">
-            <div class="recipebox">
+            <div class="recipebox" id="tonkatsu">
                 <div class="recipeimg">
-                    <img src="images/Tonkatsu YIPPEE.jpg" alt="Tonkatsu recipe">
+                    <img src="./images/Tonkatsu YIPPEE.jpg" alt="Tonkatsu recipe">
                 </div>
                 <div class="recipetext">
                     Tonkatsu Recipe
                 </div>
             </div>
-            <div class="recipebox">
+            <div class="recipebox" id="braisedpork">
                 <div class="recipeimg">
-                    <img src="images/Braised Pork.png" alt="braised pork recipe">
+                    <img src="./images/Braised-Pork.jpg" alt="braised pork recipe">
                 </div>
                 <div class="recipetext">
                     Braised Pork Rice Recipe
                 </div>
             </div>
-            <div class="recipebox">
+            <div class="recipebox" id="k-bulgogi">
                 <div class="recipeimg">
-                    <img src="images/Korean beef.jpg" alt="korean bulgogi recipe">
+                    <img src="./images/Korean beef.jpg" alt="korean bulgogi recipe">
                 </div>
                 <div class="recipetext">
                     Korean Bulgogi Recipe
                 </div>
             </div>
-            <div class="recipebox">
+            <div class="recipebox" id="chicken curry">
                 <div class="recipeimg">
-                    <img src="images/Indian chicken curry.jpg" alt="indian chicken curry recipe">
+                    <img src="./images/Indian chicken curry.jpg" alt="indian chicken curry recipe">
                 </div>
                 <div class="recipetext">
                     Indian Chicken Curry Recipe
                 </div>
             </div>
-            <div class="recipebox">
+            <div class="recipebox" id="kimbap">
                 <div class="recipeimg">
-                    <img src="images/Kimbap.jpg" alt="kimbap recipe">
+                    <img src="./images/Kimbap.jpg" alt="kimbap recipe">
                 </div>
                 <div class="recipetext">
                     Kimbap Recipe
                 </div>
             </div>
-            <div class="recipebox">
+            <div class="recipebox" id="yakisoba">
                 <div class="recipeimg">
-                    <img src="images/Yakisoba.jpg" alt="yakisoba recipe">
+                    <img src="./images/Yakisoba.jpg" alt="yakisoba recipe">
                 </div>
                 <div class="recipetext">
                     Yakisoba Recipe
                 </div>
             </div>
         </div>
+        
+        <!-- The overlay box will be appended dynamically -->
+        <div class="bg-dim"></div>
+        <div class="overlay-box">
+            <img id="overlayImage" src="" alt="Recipe Image">
+            <div class="text-container">
+                <h2 id="overlayTitle"></h2>
+                <div id="overlayInstructions"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+    <div class="footer">
+        yo
     </div>
 </body>
 </html>

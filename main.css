@@ -10,6 +10,18 @@ body {
     padding: 0;
 }
 
+/* footer */
+.footer {
+    background-color: #fcdf80;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 33px;
+    border-top: 1px solid black;
+}
+
 /* Header */
 .container {
     background-color: #fcdf80;
@@ -19,6 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 33px;
+    border-bottom: 1px solid black;
 }
 .container h1 u a{
     font-family: "Balsamiq Sans", sans-serif;
@@ -53,6 +66,27 @@ body {
     padding: 8px 15px;
     padding-right: 0px;
     transition: color 0.3s ease-in-out;
+}
+.selected {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 10px 50px;
+    padding-bottom: 20px;
+}
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 35px 8px;
+    padding-bottom: 25px;
+}
+.imgs img{
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
 }
 
 /* Recipes */
@@ -147,6 +181,7 @@ hr.custom{
     font-size: 28px;
     padding: 5px 15px;
     backdrop-filter: blur(2px); 
+    background-color: rgba(255, 255, 255, 0.3);
 }
 .allrecipes {
     display: flex;
@@ -192,10 +227,17 @@ img {
     height: 350px;
     margin: 10px; 
 }
+.recipebox:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+}
 
 .recipetext {
     margin-top: 8px; 
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 650;
     color: #333;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -205,6 +247,103 @@ img {
 .recipeimg, .recipetext {
     position: relative;
     z-index: 1;
+}
+.bg-dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; /* Initially hidden */
+}
+
+.bg-dim.active {
+    display: block; /* Show when active */
+}
+
+.overlay-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 80%;
+    max-width: 1000px;
+    height: 80%;
+    max-height: 600px;
+    background: #FDFFDB;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    display: none; /* Initially hidden */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.overlay-box.active {
+    display: flex; /* Show when active */
+}
+
+.overlay-box img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+/* Ensure no movement occurs when hovering */
+.overlay-box:hover {
+    transform: translate(-50%, -50%) !important; /* Prevent any unwanted transform on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Keep shadow consistent */
+}
+
+/* Additional styling for the text container inside the overlay */
+.overlay-box .text-container {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.overlay-box .text-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.overlay-box .text-container #overlayInstructions {
+    font-size: 16px;
+    line-height: 1.5;
+    max-height: 400px; 
+    overflow-y: auto; /* Enable scrolling inside this container */
+}
+
+
+.overlay-box .recipetext {
+    font-size: 24px;
+    color: #333;
+    text-align: left;
+    margin: 10px 0;
+}
+
+/* Make the text responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .overlay-box {
+        flex-direction: column; /* Stack the image and text vertically */
+        width: 90%;
+        height: auto;
+    }
+
+    .overlay-box img {
+        width: 80%; /* Scale image down on smaller screens */
+    }
+
+    .overlay-box .text-container {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 /* Upload Recipes */
@@ -246,7 +385,7 @@ img {
     justify-content: center;
 }
 .submitbutton {
-    background-color: #12abfd; 
+    background-color: #b65e00; 
     color: white; 
     padding: 10px 20px; 
     border: none; 
@@ -271,7 +410,7 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 250px auto;
+    margin: 60px auto;
     border: 3px solid #7b3f00;
     
 }
@@ -280,4 +419,60 @@ img {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease-in-out;
+}
+
+/* index page */
+.introtitle {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: Left;
+    font-size: 36px;
+    margin: 30px;
+    padding: 20px 30px;
+}
+.introbody {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: Left;
+    font-size: 26px;
+    margin: 15px;
+    margin-top: 30px;
+    padding: 10px 70px;
+}
+hr.intro {
+    border: 1;
+    border-radius: 30px;
+    height: 4px;
+    color: black;
+    background-color: black;
+    margin-left: 0px;
+    width: 26%;
+}
+.startcooking {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-size: 25px;
+    justify-content: center;
+    margin-top: 80px;
+}
+.int {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    text-align: center;
+    font-size: 18px;
+    justify-content: center;
+    margin-top: 0px;
+    background-color: #f8fca8;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.int h2 em {
+    font-family: "Dancing Script", cursive;
+    font-size: 55px;
+    font-weight: 100;
 }
