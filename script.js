@@ -197,3 +197,47 @@ document.querySelectorAll(".recipebox").forEach(box => {
 
 // Close overlay when the dimmed background is clicked
 document.querySelector(".bg-dim").addEventListener("click", closeOverlay);
+
+
+//Recipe filtering system
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all checkboxes and recipe boxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const recipeBoxes = document.querySelectorAll(".recipebox");
+
+    // Function to filter recipes
+    function filterRecipes() {
+        // Get selected values for each filter category
+        const selectedCuisine = Array.from(document.querySelectorAll('input[data-group="Cuisine"]:checked')).map(cb => cb.value.toLowerCase());
+        const selectedMeal = Array.from(document.querySelectorAll('input[data-group="Meal"]:checked')).map(cb => cb.value.toLowerCase());
+        const selectedIngredients = Array.from(document.querySelectorAll('input[data-group="Ingredients"]:checked')).map(cb => cb.value.toLowerCase());
+
+        // Iterate through all recipe boxes and check if they match the selected filters
+        recipeBoxes.forEach(box => {
+            const recipeCuisine = box.dataset.cuisine.toLowerCase();
+            const recipeMealType = box.dataset.meal.toLowerCase();
+            const recipeIngredients = box.dataset.ingredients.toLowerCase().split(",");
+
+            // Check matches
+            const matchesCuisine = selectedCuisine.length === 0 || selectedCuisine.includes(recipeCuisine);
+            const matchesMeal = selectedMeal.length === 0 || selectedMeal.includes(recipeMealType);
+            const matchesIngredients = selectedIngredients.length === 0 || selectedIngredients.some(ingredient => recipeIngredients.includes(ingredient));
+
+            // Show or hide the recipe box based on matches
+            if (matchesCuisine && matchesMeal && matchesIngredients) {
+                box.style.display = "flex"; // Show matching recipes
+            } else {
+                box.style.display = "none"; // Hide non-matching recipes
+            }
+        });
+    }
+
+    // Add event listeners to all checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", filterRecipes);
+    });
+
+    // Initial filter to display all recipes on load
+    filterRecipes();
+});

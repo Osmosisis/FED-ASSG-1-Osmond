@@ -25,37 +25,37 @@
                 <li>
                     <a href="#"><h2>Cuisine Type</h2></a>
                     <ul class="dropdown">
-                        <li><a href="#"><input type="checkbox" value="Chinese" checked>Chinese</a></li>
-                        <li><a href="#"><input type="checkbox" value="Japanese" checked>Japanese</a></li>
-                        <li><a href="#"><input type="checkbox" value="Korean" checked>Korean</a></li>
-                        <li><a href="#"><input type="checkbox" value="Indian" checked>Indian</a></li>
+                        <li><a href="#"><input type="checkbox" value="Chinese" data-group="Cuisine" >Chinese</a></li>
+                        <li><a href="#"><input type="checkbox" value="Japanese" data-group="Cuisine" >Japanese</a></li>
+                        <li><a href="#"><input type="checkbox" value="Korean" data-group="Cuisine" >Korean</a></li>
+                        <li><a href="#"><input type="checkbox" value="Indian" data-group="Cuisine" >Indian</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#"><h2>Meal Type</h2></a>
                     <ul class="dropdown">
-                        <li><a href="#"><input type="checkbox" value="Breakfast" checked>Breakfast</a></li>
-                        <li><a href="#"><input type="checkbox" value="Lunch" checked>Lunch</a></li>
-                        <li><a href="#"><input type="checkbox" value="Dinner" checked>Dinner</a></li>
+                        <li><a href="#"><input type="checkbox" value="Breakfast" data-group="Meal" >Breakfast</a></li>
+                        <li><a href="#"><input type="checkbox" value="Lunch" data-group="Meal" >Lunch</a></li>
+                        <li><a href="#"><input type="checkbox" value="Dinner" data-group="Meal" >Dinner</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#"><h2>Ingredients</h2></a>
                     <ul class="dropdown">
-                        <li><a href="#"><input type="checkbox" value="Beef" checked>Beef</a></li>
-                        <li><a href="#"><input type="checkbox" value="Pork" checked>Pork</a></li>
-                        <li><a href="#"><input type="checkbox" value="Chicken" checked>Chicken</a></li>
-                        <li><a href="#"><input type="checkbox" value="Lettuce" checked>Lettuce</a></li>
-                        <li><a href="#"><input type="checkbox" value="Cabbage" checked>Cabbage</a></li>
-                        <li><a href="#"><input type="checkbox" value="Potato" checked>Potato</a></li>
-                        <li><a href="#"><input type="checkbox" value="Various vegetables" checked>Various vegetables</a></li>
+                        <li><a href="#"><input type="checkbox" value="Beef" data-group="Ingredients" >Beef</a></li>
+                        <li><a href="#"><input type="checkbox" value="Pork" data-group="Ingredients" >Pork</a></li>
+                        <li><a href="#"><input type="checkbox" value="Chicken" data-group="Ingredients" >Chicken</a></li>
+                        <li><a href="#"><input type="checkbox" value="Lettuce" data-group="Ingredients" >Lettuce</a></li>
+                        <li><a href="#"><input type="checkbox" value="Cabbage" data-group="Ingredients" >Cabbage</a></li>
+                        <li><a href="#"><input type="checkbox" value="Potato" data-group="Ingredients" >Potato</a></li>
+                        <li><a href="#"><input type="checkbox" value="Various vegetables" data-group="Ingredients" >Various vegetables</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <hr class="custom">
         <div class="allrecipes">
-            <div class="recipebox" id="tonkatsu">
+            <div class="recipebox" id="tonkatsu" data-cuisine="Japanese" data-meal="Dinner" data-ingredients="Pork,Lettuce,Various vegetables">
                 <div class="recipeimg">
                     <img src="./images/Tonkatsu YIPPEE.jpg" alt="Tonkatsu recipe">
                 </div>
@@ -63,7 +63,7 @@
                     Tonkatsu Recipe
                 </div>
             </div>
-            <div class="recipebox" id="braisedpork">
+            <div class="recipebox" id="braisedpork" data-cuisine="Chinese" data-meal="Lunch" data-ingredients="Pork,Various vegetables">
                 <div class="recipeimg">
                     <img src="./images/Braised-Pork.jpg" alt="braised pork recipe">
                 </div>
@@ -71,7 +71,7 @@
                     Braised Pork Rice Recipe
                 </div>
             </div>
-            <div class="recipebox" id="k-bulgogi">
+            <div class="recipebox" id="k-bulgogi" data-cuisine="Korean" data-meal="Lunch" data-ingredients="Beef, Potato, Various vegetables">
                 <div class="recipeimg">
                     <img src="./images/Korean beef.jpg" alt="korean bulgogi recipe">
                 </div>
@@ -79,7 +79,7 @@
                     Korean Bulgogi Recipe
                 </div>
             </div>
-            <div class="recipebox" id="chicken curry">
+            <div class="recipebox" id="chicken curry" data-cuisine="Indian" data-meal="Dinner" data-ingredients="Chicken, Various vegetables">
                 <div class="recipeimg">
                     <img src="./images/Indian chicken curry.jpg" alt="indian chicken curry recipe">
                 </div>
@@ -87,7 +87,7 @@
                     Indian Chicken Curry Recipe
                 </div>
             </div>
-            <div class="recipebox" id="kimbap">
+            <div class="recipebox" id="kimbap" data-cuisine="Korean" data-meal="Breakfast" data-ingredients="Pork,Chicken,Lettuce,Various vegetables">
                 <div class="recipeimg">
                     <img src="./images/Kimbap.jpg" alt="kimbap recipe">
                 </div>
@@ -95,7 +95,7 @@
                     Kimbap Recipe
                 </div>
             </div>
-            <div class="recipebox" id="yakisoba">
+            <div class="recipebox" id="yakisoba" data-cuisine="Japanese" data-meal="Breakfast" data-ingredients="Chicken,Lettuce,Various vegetables">
                 <div class="recipeimg">
                     <img src="./images/Yakisoba.jpg" alt="yakisoba recipe">
                 </div>
