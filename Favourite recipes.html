@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="favourites-page">
     <div class="container">
         <h1><u><a href="index.html">Recipository</a></u></h1>
         <div class="nav">
@@ -16,13 +16,26 @@
             <a href="Upload Recipes.html"><h2>Upload Recipes</h2></a>
         </div>
     </div>
-    <div>
-        fav recipes
-        <hr>
+    <div class="pls">
+        <div class="bg">
+            <div class="favourite-recipes-container recipewordv2">
+                <h1>Your Favourite Recipes</h1>
+            </div>
+            <div class="pipi">
+                <div class="overlay-box">
+                    <img id="overlayImage" src="" alt="Recipe Image">
+                    <div class="text-container">
+                        <h2 id="overlayTitle"></h2>
+                        <div id="overlayInstructions"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-dim"></div>
+        </div>
     </div>
-    
-    <div class="footer">
+    <footer>
         yo
-    </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

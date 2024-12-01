@@ -241,3 +241,137 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial filter to display all recipes on load
     filterRecipes();
 });
+
+
+// Add event listener to the "Favourite recipes" button
+document.addEventListener("DOMContentLoaded", () => {
+    const isRecipesPage = document.body.classList.contains('recipes-page');
+    const isFavouritesPage = document.body.classList.contains('favourites-page');
+
+    if (isRecipesPage) {
+        setupFavouritesOnMainPage();
+    }
+
+    if (isFavouritesPage) {
+        displayFavouritesOnFavouritesPage();
+    }
+});
+// Function to handle "Add to Favourites" on the main page
+function setupFavouritesOnMainPage() {
+    const favouriteCheckboxes = document.querySelectorAll('.favourite input[type="checkbox"]');
+
+    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    favourites.forEach(recipe => {
+        const recipeBox = document.getElementById(recipe.id);
+        if (recipeBox) {
+            const checkbox = recipeBox.querySelector('input[type="checkbox"]');
+            if (checkbox) checkbox.checked = true;
+            recipeBox.classList.add("favorited");
+        }
+    });
+
+    favouriteCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", (e) => {
+            const recipeBox = e.target.closest(".recipebox");
+
+            if (checkbox.checked) {
+                recipeBox.classList.add("favorited");
+                addToFavourites(recipeBox);
+            } else {
+                recipeBox.classList.remove("favorited");
+                removeFromFavourites(recipeBox.id);
+            }
+        });
+    });
+}
+// Add recipe to localStorage
+function addToFavourites(recipeBox) {
+    try {
+        const recipeData = {
+            id: recipeBox.id,
+            image: recipeBox.querySelector("img").getAttribute("src"),
+            title: recipeBox.querySelector(".recipetext").textContent,
+            cuisine: recipeBox.dataset.cuisine,
+            meal: recipeBox.dataset.meal,
+            ingredients: recipeBox.dataset.ingredients
+        };
+
+        let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+        // Avoid duplicates
+        if (!favourites.some(recipe => recipe.id === recipeData.id)) {
+            favourites.push(recipeData);
+            localStorage.setItem("favourites", JSON.stringify(favourites));
+        }
+    } catch (error) {
+        console.error("Error adding to favourites:", error);
+    }
+} 
+// Remove recipe from localStorage
+function removeFromFavourites(recipeId) {
+    try {
+        let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+        favourites = favourites.filter(recipe => recipe.id !== recipeId);
+        localStorage.setItem("favourites", JSON.stringify(favourites));
+    } catch (error) {
+        console.error("Error removing from favourites:", error);
+    }
+}
+// Function to display favourites on the "Favourite Recipes" page
+function displayFavouritesOnFavouritesPage() {
+    const container = document.querySelector(".favourite-recipes-container");
+
+    try {
+        const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+        if (favourites.length === 0) {
+            container.innerHTML = "<h1>Your Favourite Recipes</h1><p>No favourite recipes yet!</p>";
+            return;
+        }
+
+        // Keep the heading
+        container.innerHTML = "<h1>Your Favourite Recipes</h1>";
+
+        favourites.forEach(recipe => {
+            const recipeBox = document.createElement("div");
+            recipeBox.classList.add("recipebox");
+            recipeBox.id = recipe.id;
+            recipeBox.dataset.cuisine = recipe.cuisine;
+            recipeBox.dataset.meal = recipe.meal;
+            recipeBox.dataset.ingredients = recipe.ingredients;
+
+            recipeBox.innerHTML = `
+                <div class="recipeimg">
+                    <img src="${recipe.image}" alt="${recipe.title}">
+                </div>
+                <div class="recipetext">${recipe.title}</div>
+                <div class="favourite">
+                    <label>
+                        <input type="checkbox" value="fav" checked> Add to <em>Favourites</em>!
+                    </label>
+                </div>
+            `;
+
+            // Add event listener to the checkbox in favourites page
+            const checkbox = recipeBox.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener("change", (e) => {
+                if (!checkbox.checked) {
+                    removeFromFavourites(recipe.id);
+                    recipeBox.remove();
+                    
+                    // Check if there are any recipes left
+                    const remainingRecipes = document.querySelectorAll('.recipebox');
+                    if (remainingRecipes.length === 0) {
+                        container.innerHTML = "<h1>Your Favourite Recipes</h1><p>No favourite recipes yet!</p>";
+                    }
+                }
+            });
+
+            container.appendChild(recipeBox);
+        });
+    } catch (error) {
+        console.error("Error displaying favourites:", error);
+        container.innerHTML = "<h1>Your Favourite Recipes</h1><p>Error loading favourite recipes.</p>";
+    }
+}
+
